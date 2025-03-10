@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University To-Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* تنسيق الجدول */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">University To-Do List</h2>
+        
+        <div class="form-group">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter Task Title" required>
+            <input type="date" id="startDate" class="form-control mt-2" required>
+            <input type="date" id="endDate" class="form-control mt-2">
+            <button id="addTaskBtn" class="btn btn-primary mt-3" onclick="addTask()">Add Task</button>
+        </div>
+
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Task Title</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>States</th>
+                </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+        </table>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
